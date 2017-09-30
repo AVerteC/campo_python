@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #mad libs program usin argv !
 #use python3
 import sys
