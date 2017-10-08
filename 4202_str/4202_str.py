@@ -4,7 +4,7 @@ str = "namesnoingoresin"
 
 def iterate_chars(word):
     for i in range(1, len(word)):
-        clear
-        word[::i+1]
+
+        print(word[i])
 
 iterate_chars(str)
