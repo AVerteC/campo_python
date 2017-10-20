@@ -9,9 +9,9 @@ gueso = 0
 for x in range(0,11):
 
     guess = input('GUESS: ')
-    print (len(guess))
-    print ("Debuga {} guess".format(gueso))
-
+"""print (len(guess))"""
+    """print ("Debuga {} guess".format(gueso))
+    """
 
     if len(guess) != 0 & len(guess) < 5   :
         print("0, 1, 2, 3, 4 that's how we count to five!")

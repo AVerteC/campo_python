@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import sys
 
+a =
 
 quotient = float(sys.argv[2])/float(sys.argv[1])
 remainder = int(sys.argv[2]) % int(sys.argv[1])
