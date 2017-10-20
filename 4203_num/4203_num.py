@@ -29,32 +29,32 @@ def typechecker(var):
     #check4 = (type(var is long))
 
     if check1 == True:
-        typ = typ + "int"
+        typ = typ + "Int"
         return typ
 
     if check2 == True:
-        typ = typ + "float"
+        typ = typ + "Float"
         return typ
 
     if check3 == True:
-        typ = typ + "complex"
+        typ = typ + "Complex"
         return typ
 
 
 
 typechecker(a)
-print("Variable a contains: {} which is of type {} ".format(a, typ))
+print("Variable a contains: {} which is of type: {} ".format(a, typ))
 typ = ""
 
 
 typechecker(b)
-print("Variable b contains: {} which is of type {} ".format(b, typ))
+print("Variable b contains: {} which is of type: {} ".format(b, typ))
 typ = ""
 
 typechecker(c)
-print("Variable c contains: {} which is of type {}".format(c, typ))
+print("Variable c contains: {} which is of type: {}".format(c, typ))
 typ = ""
 
 typechecker(d)
-print("Variable d contains: {} which is of type {}".format(d, typ))
+print("Variable d contains: {} which is of type: {}".format(d, typ))
 typ = ""
