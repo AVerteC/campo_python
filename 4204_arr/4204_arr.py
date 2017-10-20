@@ -4,16 +4,19 @@ import sys
 inputs = sys.argv
 
 inputs.remove('4204_arr.py')
-inputs = list(map(int, inputs))
-d1= dict(Counter(inputs))
+inputs = list(map(float, inputs))
+inputsmode = list(map(float, inputs))
+d1= dict(Counter(inputsmode))
 list1 = inputs
-print(d1)
+
 modes = list()
 for k, v in d1.items():
     if v >= 2:
         modes.append(k)
 
-print(modes)
+
+mode = str(modes)
+marr = [str(a) for a in modes]
 
 '''
 make a counter which pipes out to a list
@@ -47,9 +50,8 @@ print(*list, sep='\n')
 
 print("Min: ", min(list1))
 print("Max: ", max(list1))
-print("Mean: ", mean)
-print("Median: ", median)
-'''
-print("Mode: ", mode)
-'''
-print("Range: ", rangee)
+print("Mean: ", round(mean, 4))
+print("Median: ", round(median, 4))
+print('Mode: ', end='')
+print(", " . join(marr))
+print("Range: ", round(rangee, 4))
