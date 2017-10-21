@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import sys
+#made by alan chen
 
 # division segment
 quotient = float(sys.argv[1])/float(sys.argv[2])

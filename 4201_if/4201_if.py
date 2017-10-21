@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+#made by alan chen
 secret = "memes"
 
 print("The secret word begins with a D.")

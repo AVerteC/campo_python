@@ -16,14 +16,32 @@ def eol_cap(s):
         return m.group(0).upper() if cap[0] else m.group(0).lower()
     return re.sub(r'[A-Za-z]', repl, s)
 
-print(sys.argv[1][0] + eol_cap(sys.argv[1][1:]))
-
 def eol_noncap(s):
-    return re.sub(r'[A-Z]', "*", s)
+    return re.sub(r'[AEIOU]', "*", s)
 
-nexinput = eol_cap(sys.argv[1][1:])
+def line_removenp(s):
+    return re.sub(r'[^()]', "", s)
 
-print(sys.argv[1][0] + eol_noncap(nexinput))
+def check_parentheses(s):
+    Lmath = ""
+    Rmath = ""
+    for i in range(len(s)):
+        if i = "(":
+            Lmath = 1
+        if i =
+
+stage1 = sys.argv[1][0] + eol_cap(sys.argv[1][1:])
+stage2 = eol_noncap(stage1)
+stage3 = line_removenp(stage2)
+
+
+
+print(stage1)
+print(stage2)
+print(stage3)
+
+check_parentheses(stage3)
+
 #def iterate_chars(word):
 #    for i in range(2, len(word)):
 #        print(word[i])
