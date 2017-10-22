@@ -23,19 +23,22 @@ def line_removenp(s):
     return re.sub(r'[^()]', "", s)
 
 def check_parentheses(s):
+    #total parentheses value
     mtotal = 0
     for c in s:
         if c == "(":
             mtotal += 1
         if c == ")":
             mtotal -= 1
+
+    #block failure state of )(
         if mtotal < 0:
             print("Balanced? False")
             return
-
+    #pass
     if mtotal == 0:
         print("Balanced? True")
-
+    #fail
     else:
         print("Balanced? False")
 
