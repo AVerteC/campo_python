@@ -29,7 +29,9 @@ def check_parentheses(s):
             mtotal += 1
         if c == ")":
             mtotal -= 1
-
+        if mtotal < 0:
+            print("Balanced? False")
+            return
 
     if mtotal == 0:
         print("Balanced? True")
@@ -37,20 +39,22 @@ def check_parentheses(s):
     else:
         print("Balanced? False")
 
-
+#split the string after the first character ex. "Help!" => "H" "elp!"
+#and then capitalize the second part
 stage1 = sys.argv[1][0] + eol_cap(sys.argv[1][1:])
+
+#change all vowels to "*"
 stage2 = eol_noncap(stage1)
+
+#remove all characters except parentheses
 stage3 = line_removenp(stage2)
 
 
 
 print(stage1)
 print(stage2)
+
 #print(stage3)
+
+#check the parenteses balance
 check_parentheses(stage3)
-
-#def iterate_chars(word):
-#    for i in range(2, len(word)):
-#        print(word[i])
-
-#iterate_chars(str)
