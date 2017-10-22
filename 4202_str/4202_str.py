@@ -21,15 +21,23 @@ def eol_noncap(s):
 
 def line_removenp(s):
     return re.sub(r'[^()]', "", s)
-"""
+
 def check_parentheses(s):
-    Lmath = ""
-    Rmath = ""
-    for i in range(len(s)):
-        if i = "(":
-            Lmath = 1
-        if i =
-"""
+    mtotal = 0
+    for c in s:
+        if c == "(":
+            mtotal += 1
+        if c == ")":
+            mtotal -= 1
+
+
+    if mtotal == 0:
+        print("Balanced? True")
+
+    else:
+        print("Balanced? False")
+
+
 stage1 = sys.argv[1][0] + eol_cap(sys.argv[1][1:])
 stage2 = eol_noncap(stage1)
 stage3 = line_removenp(stage2)
@@ -38,9 +46,8 @@ stage3 = line_removenp(stage2)
 
 print(stage1)
 print(stage2)
-print(stage3)
-
-#check_parentheses(stage3)
+#print(stage3)
+check_parentheses(stage3)
 
 #def iterate_chars(word):
 #    for i in range(2, len(word)):
