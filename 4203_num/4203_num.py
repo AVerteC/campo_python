@@ -3,14 +3,6 @@ import sys
 #made by alan chen
 
 # division segment
-quotient = float(sys.argv[1])/float(sys.argv[2])
-quotient = round(quotient,3)
-remainder = float(sys.argv[1]) % float(sys.argv[2])
-
-if (float(sys.argv[2]) % float(sys.argv[1]) )!= 0:
-    remainder = float(remainder)
-    remainder = round(remainder, 3)
-print("{} divided by {} equals {} remainder {}".format(sys.argv[1], sys.argv[2], quotient, remainder))
 
 #number typechecking/printing system
 
@@ -18,12 +10,22 @@ a = 10
 b = 56.99
 c = 2+3j
 d = 1234
-typ = ""
 
+def divnmod():
+    quotient = float(sys.argv[1])/float(sys.argv[2])
+    quotient = round(quotient,3)
+    remainder = float(sys.argv[1]) % float(sys.argv[2])
+
+    if (float(sys.argv[2]) % float(sys.argv[1]) )!= 0:
+        remainder = float(remainder)
+        remainder = round(remainder, 3)
+        print("{} divided by {} equals {} remainder {}".format(sys.argv[1], sys.argv[2], quotient, remainder))
 
 
 def typechecker(var):
+    global dicta
     global typ
+    typ = ""
     global a
     global b
     global c
@@ -35,42 +37,61 @@ def typechecker(var):
     #long(x) are removed in python3 afaik
     #check4 = (type(var is long))
     if check1 == True:
+
         typ = ""
+        var = str(var)
         typ = typ + "Integer"
-        return typ
+        dicta = {"Value":var, "Type":typ}
+        return dicta
 
     if check2 == True:
+
         typ = ""
+        var = str(var)
         typ = typ + "Float"
-        return typ
+        dicta = {"Value":var, "Type":typ}
+        return dicta
 
     if check3 == True:
-        typ = ""
+
         typ = typ + "Complex"
         var = str(var)
         var = var.replace("j","i").replace("(","").replace(")","")
-
-
-        return typ
-
-
+        dicta = {"Value":var, "Type":typ}
+        return dicta
 
 
 
 
+def checka():
+    global typ
+    typechecker(a)
+    global dicta
+    print("Variable a contains: {} which is of type: {} ".format(dicta['Value'], dicta["Type"]))
 
-typechecker(a)
-print("Variable a contains: {} which is of type: {} ".format(a, typ))
-typ = ""
+def checkb():
+    global typ
+    typechecker(b)
+    global dicta
+    print("Variable b contains: {} which is of type: {} ".format(dicta['Value'], dicta["Type"]))
 
+def checkc():
+    global typ
+    typechecker(c)
+    global dicta
+    print("Variable c contains: {} which is of type: {} ".format(dicta['Value'], dicta["Type"]))
 
-typechecker(b)
-print("Variable b contains: {} which is of type: {} ".format(b, typ))
-typ = ""
+def checkd():
+    global typ
+    typechecker(d)
+    global dicta
+    print("Variable d contains: {} which is of type: {} ".format(dicta['Value'], dicta["Type"]))
 
-typechecker(c)
-print("Variable c contains: {} which is of type: {}".format(c, typ))
-typ = ""
+def main():
+    divnmod()
+    checka()
+    checkb()
+    checkc()
+    checkd()
 
-typechecker(d)
-print("Variable d contains: {} which is of type: {}".format(d, typ))
+main()
