@@ -1,13 +1,7 @@
 #!/usr/bin/env python3
 import sys
 import re
-#inputs = 'abcdefghijklmnopqrstuvwxyz'
 #made by alan chen
-#print(sys.argv[1][0])
-#print(sys.argv[1][1:])
-
-fl = sys.argv[1][0]
-rest = sys.argv[1][1:]
 
 def eol_cap(s):
     cap = [False]
@@ -44,20 +38,29 @@ def check_parentheses(s):
 
 #split the string after the first character ex. "Help!" => "H" "elp!"
 #and then capitalize the second part
-stage1 = sys.argv[1][0] + eol_cap(sys.argv[1][1:])
+def s1():
+    global stage1
+    stage1 = sys.argv[1][0] + eol_cap(sys.argv[1][1:])
+    print(stage1)
 
+def s2():
 #change all vowels to "*"
-stage2 = eol_noncap(stage1)
+    global stage2
+    stage2 = eol_noncap(stage1)
+    print(stage2)
 
+def s3():
 #remove all characters except parentheses
-stage3 = line_removenp(stage2)
+    global stage
+    stage3 = line_removenp(stage2)
+    check_parentheses(stage3)
 
 
 
-print(stage1)
-print(stage2)
 
-#print(stage3)
+def main():
+    s1()
+    s2()
+    s3()
 
-#check the parenteses balance
-check_parentheses(stage3)
+main()
