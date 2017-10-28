@@ -15,8 +15,8 @@ def madlibs():
         animal = input("Please input an animal: ")
         noise = input("Please input a noise: ")
 
-        print('\n')
-        print(Title)
+        print('\n' + Title)
+        #print(Title)
 
         print('{0} MacDonald had a {1}, E-I-E-I-O \n'
         'and on that {2} he had a {3}, E-I-E-I-O \n'
