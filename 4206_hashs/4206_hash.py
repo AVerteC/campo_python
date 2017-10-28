@@ -5,10 +5,14 @@ def hashmatcher():
     namehash = {'Aaran':'Guha','Aaryan':'Divate','Aaryan':'Singh'}
     print(namehash.get('Aaryan'))
     for k in namehash:
-        if len(namehash.get(k)) > 1:
+        if namehash.count(k) > 1:
+            print("condition1complete")
 
-            print (k+" "  + str(len(namehash.get(k))) + " " + namehash.get(k))
 
+def htest():
+    nhash = {'Jason': 'Sen','Jason': 'Do','Jason': 'Dan'}
+    print(nhash)
+    print(nhash.get('Jason'))
 """"
 Abelino        Espinoza
 Abhishek        Govindarasu
@@ -182,6 +186,6 @@ Zachary        Hallera
 
 
 def main():
-    hashmatcher()
-
+    # hashmatcher()
+    htest()
 main()
