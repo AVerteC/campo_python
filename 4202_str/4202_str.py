@@ -25,7 +25,7 @@ def check_parentheses(s):
         if c == ")":
             mtotal -= 1
 
-    #block failure state of )(
+        #block failure state of )(
         if mtotal < 0:
             print("Balanced? False")
             return

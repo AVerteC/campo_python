@@ -5,26 +5,33 @@
 import sys
 
 
+def madlibs():
+
+    if len(sys.argv) == 2:
+        Title = sys.argv[1].upper()
+
+        adjective = input("Please input an adjective: ")
+        business = input("Please input a business: ")
+        animal = input("Please input an animal: ")
+        noise = input("Please input a noise: ")
+
+        print('\n')
+        print(Title)
+
+        print('{0} MacDonald had a {1}, E-I-E-I-O \n'
+        'and on that {2} he had a {3}, E-I-E-I-O \n'
+        'with a {4} {5} here \n'
+        'with a {6} {7} there, \n'
+        'everywhere a {8} {9}, \n'
+        '{10} MacDonald had a {11}, E-I-E-I-O!'
+        .format(adjective, business, business, animal, noise, noise, noise, noise, noise, noise, adjective, business))
+
+    else:
+        print('title not detected')
+
+def main():
+    madlibs()
 
 
-if len(sys.argv) == 2:
-    Title = sys.argv[1].upper()
 
-    adjective = input("Please input an adjective: ")
-    business = input("Please input a business: ")
-    animal = input("Please input an animal: ")
-    noise = input("Please input a noise: ")
-
-    print('\n')
-    print(Title)
-
-    print('%s MacDonald had a %s, E-I-E-I-O \n'
-    'and on that %s he had a %s, E-I-E-I-O \n'
-    'with a %s %s here \n'
-    'with a %s %s there, \n'
-    'everywhere a %s %s, \n'
-    '%s MacDonald had a %s, E-I-E-I-O!'
-    ) % (adjective, business, business, animal, noise, noise, noise, noise, noise, noise, adjective, business)
-
-else:
-    print('title not detected')
+main()
