@@ -4,11 +4,20 @@
 def hashmatcher():
     namehash = {'Aaryan':['Divate','Singh'], 'Alan':['Chen','Do'],'Alexander':['Shtov','Sosnov','Xie'],'Brandon':['Darby','Tedja'],'Daniel':['Camarena','Nelson'],'Ian':['Darby','Mcmamara','Yao']}
     for k in namehash:
+<<<<<<< HEAD
         print (k ,end = "")
         print (namehash.get(k))
 
+=======
+        if namehash.count(k) > 1:
+            print("condition1complete")
+>>>>>>> e1fd86a... continuing hash excercise
 
 
+def htest():
+    nhash = {'Jason': 'Sen','Jason': 'Do','Jason': 'Dan'}
+    print(nhash)
+    print(nhash.get('Jason'))
 """"
 
 
@@ -68,6 +77,6 @@ Sriram        Selvakumar
 
 
 def main():
-    hashmatcher()
-
+    # hashmatcher()
+    htest()
 main()
