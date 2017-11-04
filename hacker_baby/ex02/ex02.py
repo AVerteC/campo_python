@@ -1,6 +1,8 @@
 #!usr/bin/env python3
 
 import sys
+
+
 def init():
     listo = sys.argv[1:]
 def arr():
@@ -14,24 +16,9 @@ def arr():
 
 def lensort():
         # lambda x: len(x) replaces a def s(x): return len(x)
-        slisto = sorted(listo, key=lambda x: len(x),reverse=True)
+        slisto = sorted(listo, key=len,reverse=True)
         for i in slisto:
             print(i)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def main():
         arr()
