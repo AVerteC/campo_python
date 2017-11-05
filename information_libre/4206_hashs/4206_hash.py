@@ -11,8 +11,6 @@ def fileInterpret(allLines):
     nameDict = {}
     for element in allLines:
         nameCombine = element.split()
-        #nameDict[nameCombine[0]]
-        #for item in nameCombine:
         if nameCombine[0] not in nameDict:
             nameDict[nameCombine[0]] = [nameCombine[1]]
         else:
@@ -32,6 +30,7 @@ def printDupResult(nameDict):
 #Alexander
 #Brandon
 #Daniel
+
 def main():
     d = fileInterpret(getfileLines())
     printDupResult(d)

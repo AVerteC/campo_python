@@ -6,7 +6,7 @@ def getfileLines():
     file = open("names.txt", "r")
     allLines = file.readlines()
     return allLines
-
+    # testing the file reading output
 
 def main():
     print(getfileLines())

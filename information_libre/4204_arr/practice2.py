@@ -1,5 +1,5 @@
 #!usr/bin/env python3
-#made by alan chen
+# made by Alan Chen
 import sys
 
 
@@ -13,10 +13,12 @@ def init():
     inputs = list(map(float, inputs))
     list1 = inputs
 
+
 def rangee():
-    #calculate range
+    # calculate range
         rangee = max(list1)-min(list1)
         print("Range: ", round(rangee, 4))
+
 
 def main():
     init()

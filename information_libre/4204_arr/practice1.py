@@ -1,5 +1,5 @@
 #!usr/bin/env python3
-#made by alan chen
+# made by Alan Chen
 import sys
 
 
@@ -15,7 +15,7 @@ def init():
 
 
 def mean():
-    #calculate mean
+    # calculate mean
         mean = sum(list1)/len(list1)
         print("Mean: ", round(mean, 4))
 
