@@ -19,7 +19,6 @@ def fileInterpret(allLines):
             nameDict[nameCombine[0]].append(nameCombine[1])
     return nameDict
 
-    #print(nameDict)
 
 def printDupResult(nameDict):
         for key in nameDict:
@@ -28,23 +27,13 @@ def printDupResult(nameDict):
 
 
 #list of first names that should match
-
 #Aaryan
 #Alan
 #Alexander
 #Brandon
 #Daniel
-
-
-
-
-
-
 def main():
     d = fileInterpret(getfileLines())
     printDupResult(d)
-        #fileInterpret(filereader())
-
-   #printResult()
 
 main()
