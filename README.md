@@ -1,2 +1,0 @@
-# casaremote
-home remote repo
