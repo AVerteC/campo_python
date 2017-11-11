@@ -5,6 +5,8 @@ import sys
 
 def init():
     listo = sys.argv[1:]
+
+
 def arr():
         num = 0
         global listo
@@ -20,8 +22,10 @@ def lensort():
         for i in slisto:
             print(i)
 
+
 def main():
         arr()
         lensort()
+
 
 main()

@@ -1,23 +1,38 @@
 #!/usr/bin/env python3
 import sys
 
-
 def init():
-    uptosum = sys.argv[1]
-    if uptosum is not int or float:
-        print("Program input is not valid")
+    if len(sys.argv) == 1:
+        print("No input detected")
+        exit()
     else:
-        return uptosum
+        if sys.argv[1].isnumeric() is True:
+            pass
+        else:
+            print("Input is not an integer")
+            exit()
 
-
-def multiplestosum(uptosum):
-    [i for i in range(1000) if i % 3 == 0 or i % 5 == 0]
-
-    print(uptosum)
+def multiplestosum():
+    uptosum = int(sys.argv[1])
+    all = 0
+    if uptosum < 0:
+        uptosum = str(uptosum)
+        uptosum = uptosum.replace('-', '')
+        uptosum = int(uptosum)
+        for num in range(uptosum):
+            if num % 3 == 0 or num % 5 == 0:
+                all += num
+        print('-' + str(all))
+    else:
+        for num in range(uptosum):
+            if num % 3 == 0 or num % 5 == 0:
+                all += num
+        print(all)
 
 
 def main():
-    multiplestosum(init())
+    init()
+    multiplestosum()
 
 
 main()
