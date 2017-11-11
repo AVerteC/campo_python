@@ -1,3 +1,4 @@
 #!/usr/bin/env python3
 
-print(str(121 % 11))
+print(10/2)
+print(10 % 2)
