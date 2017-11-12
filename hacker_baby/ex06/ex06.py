@@ -23,17 +23,15 @@ def gateinput():
 
 def d2b(cdn):
         if cdn <= 1:
-            print("a" + str(cdn))
-
+            #print("a" + str(cdn))
             return str(cdn)
         else:
-            print(str(cdn//2)+" "+str(cdn % 2))
-
+            #print(str(cdn//2)+" "+str(cdn % 2))
             return d2b(cdn//2)+str(cdn % 2)
 
 def main():
     b = gateinput()
-    print(b)
+    #print(b)
     a = d2b(b)
     print(a)
 
