@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../cryptography/.idea/cryptography.iml" filepath="$PROJECT_DIR$/../cryptography/.idea/cryptography.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/hacker_baby.iml" filepath="$PROJECT_DIR$/.idea/hacker_baby.iml" />
       <module fileurl="file://$PROJECT_DIR$/../information_libre/.idea/information_libre.iml" filepath="$PROJECT_DIR$/../information_libre/.idea/information_libre.iml" />
     </modules>

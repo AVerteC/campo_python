@@ -75,7 +75,7 @@ def median():
         median = inputs[int(mathas)]
 
     outs = round(median, 4)
-    print("Median: ", outs )
+    print("Median: ", outs)
 
 
 def minimum():
