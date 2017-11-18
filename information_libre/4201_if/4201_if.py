@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# made by alan chen
+# made by alan chen, intra id : ado
 
 def guessinggame():
 
@@ -12,7 +12,7 @@ def guessinggame():
         # print (len(guess))"""
         # print ("Debuga {} guess".format(gueso))
 
-        if len(guess) > 0 and < 5:
+        if len(guess) > 0 & len(guess) < 5:
             print("0, 1, 2, 3, 4 that's how we count to five!")
             gueso += 1
 

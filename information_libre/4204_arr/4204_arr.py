@@ -1,5 +1,6 @@
 #!usr/bin/env python3
-# made by Alan Chen
+# made by alan chen, intra id : ado
+
 from collections import Counter
 import sys
 
@@ -38,6 +39,7 @@ def mode():
         print('Mode: ', end='')
         print(", " . join(marr))
 
+
 # make a counter which pipes out to a list
 # then print out the list
 # but also exclude when there is no mode
@@ -54,7 +56,7 @@ def mean():
 
 def median():
     # calculate the median with indexes, but calculate the point in the center of the list if the list is even
-    if (len(inputs) % 2 == 0):
+    if len(inputs) % 2 == 0:
         inputs.sort()
         mathas = len(inputs)/2
         mathan = int(len(inputs)/2)-1
@@ -82,10 +84,6 @@ def main():
     median()
     mode()
     rangee()
-
-
-
-
 
 
 main()

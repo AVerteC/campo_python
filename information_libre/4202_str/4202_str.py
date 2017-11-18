@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 import sys
 import re
-# made by alan chen
+# made by alan chen, intra id : ado
+
 
 
 def eol_cap(s):

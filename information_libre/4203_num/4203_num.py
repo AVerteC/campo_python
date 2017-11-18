@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 import sys
-<<<<<<< Updated upstream:information_libre/4203_num/4203_num.py
-# made by Alan Chen
-=======
+# made by alan chen, intra id : ado
 
-# made by alan chen
->>>>>>> Stashed changes:4203_num/4203_num.py
 
 # division segment
 
@@ -18,14 +14,10 @@ d = 1234
 
 
 def divnmod():
-<<<<<<< Updated upstream:information_libre/4203_num/4203_num.py
+
     # division: quotient and remainder
     quotient = float(sys.argv[1])/float(sys.argv[2])
     quotient = round(quotient,3)
-=======
-    quotient = float(sys.argv[1]) / float(sys.argv[2])
-    quotient = round(quotient, 3)
->>>>>>> Stashed changes:4203_num/4203_num.py
     remainder = float(sys.argv[1]) % float(sys.argv[2])
 
     if (float(sys.argv[2]) % float(sys.argv[1])) != 0:
@@ -47,11 +39,8 @@ def typechecker(var):
     check3 = (type(var) is complex)
 
     # long(x) are removed in python3 afaik
-<<<<<<< Updated upstream:information_libre/4203_num/4203_num.py
-
-=======
     # check4 = (type(var is long))
->>>>>>> Stashed changes:4203_num/4203_num.py
+
     if check1 == True:
         typ = ""
         var = str(var)

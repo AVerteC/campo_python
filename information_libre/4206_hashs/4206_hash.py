@@ -1,5 +1,6 @@
 #!usr/bin/env python3
-# made by alan chen
+# made by alan chen, intra id : ado
+
 
 def getfileLines():
     file = open("names.txt", "r")
@@ -24,15 +25,16 @@ def printDupResult(nameDict):
                 print(str(key) + " (" + str(len(nameDict.get(key))) + "): " + str(nameDict.get(key)).replace("'",""))
 
 
-#list of first names that should match
-#Aaryan
-#Alan
-#Alexander
-#Brandon
-#Daniel
+# list of first names that should match
+# Aaryan
+# Alan
+# Alexander
+# Brandon
+# Daniel
 
 def main():
     d = fileInterpret(getfileLines())
     printDupResult(d)
+
 
 main()
