@@ -12,7 +12,7 @@ def arr():
         global listo
         listo = sys.argv[1:]
         for i in listo:
-            num +=1
+            num += 1
             print("Argv of {0} is {1}".format(num, i))
 
 

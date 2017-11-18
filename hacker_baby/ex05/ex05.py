@@ -23,7 +23,7 @@ def uinput(nameDict):
             a = str(nameDict.get(str(inputu)))
             print(a)
             stat1 = "True1"
-            print(stat1)
+            # print(stat1)
         else:
             for v, k in nameDict.items():
                 if k == inputu:

@@ -6,12 +6,12 @@ def init():
     if len(sys.argv) == 1:
         print("No input detected")
         exit()
-    else:
-        if sys.argv[1].isnumeric() is True:
-            pass
-        else:
-            print("Input is not an integer")
-            exit()
+    # else:
+    #    if sys.argv[1].isnumeric() is True:
+    #         pass
+    #     else:
+    #         print("Input is not an integer")
+    #         exit()
 
 def multiplestosum():
     uptosum = int(sys.argv[1])
