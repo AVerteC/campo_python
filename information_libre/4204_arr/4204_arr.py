@@ -10,20 +10,21 @@ def init():
         global d1
         global inputs
         global list1
-
-        # set up inputs
+        #set up inputs
         inputs = sys.argv
-
-        # remove the program name from the list from argv
         inputs.remove('4204_arr.py')
-
-        # use map to make all of the elements in the inputs list a float
-        inputs = list(map(float, inputs))
-
-        list1 = inputs
-        # use map to make all of the elements in the inputs list a float
-        inputsmode = list(map(float, inputs))
-        d1 = dict(Counter(inputsmode))
+        if (len(inputs) % 2 == 0):
+            # print("evens run")
+            inputs = list(map(float, inputs))
+            list1 = inputs
+            inputsmode = list(map(float, inputs))
+            d1= dict(Counter(inputsmode))
+        else:
+            # print("odds run")
+            inputs = list(map(int, inputs))
+            list1 = inputs
+            inputsmode = list(map(int, inputs))
+            d1 = dict(Counter(inputsmode))
 
 
 def mode():
@@ -39,7 +40,6 @@ def mode():
         print('Mode: ', end='')
         print(", " . join(marr))
 
-
 # make a counter which pipes out to a list
 # then print out the list
 # but also exclude when there is no mode
@@ -48,6 +48,7 @@ def rangee():
         rangee = max(list1)-min(list1)
         print("Range: ", round(rangee, 4))
 
+
 def mean():
     # calculate mean
         mean = sum(list1)/len(list1)
@@ -55,18 +56,26 @@ def mean():
 
 
 def median():
-    # calculate the median with indexes, but calculate the point in the center of the list if the list is even
-    if len(inputs) % 2 == 0:
+    # calculate the median with indexes, but adjust the calculation if the list is even
+    # even
+    if (len(inputs) % 2 == 0):
         inputs.sort()
-        mathas = len(inputs)/2
-        mathan = int(len(inputs)/2)-1
+        mathas = int(len(inputs)/2)
+        mathan = int(mathas + 1)
+        mathas = (round(inputs[mathas]))
+        mathan = (round(inputs[mathan]))
         median = (mathas + mathan)/2
+    # odd
     else:
-        mathas = len(inputs)/2
-        median = mathas
+        # print("odds are running")
+        inputs.sort()
+        mathas = (len(inputs) + 1)/2
+        print(int(mathas))
+
+        median = inputs[int(mathas)]
 
     outs = round(median, 4)
-    print("Median: ", outs)
+    print("Median: ", outs )
 
 
 def minimum():

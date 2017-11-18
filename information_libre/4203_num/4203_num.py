@@ -67,28 +67,28 @@ def checka():
     global typ
     typechecker(a)
     global dicta
-    print("Variable a contains: {} which is of type: {} ".format(dicta['Value'], dicta["Type"]))
+    print("Variable a contains: {}  which is of type: {} ".format(dicta['Value'], dicta["Type"]))
 
 
 def checkb():
     global typ
     typechecker(b)
     global dicta
-    print("Variable b contains: {} which is of type: {} ".format(dicta['Value'], dicta["Type"]))
+    print("Variable b contains: {}  which is of type: {} ".format(dicta['Value'], dicta["Type"]))
 
 
 def checkc():
     global typ
     typechecker(c)
     global dicta
-    print("Variable c contains: {} which is of type: {} ".format(dicta['Value'], dicta["Type"]))
+    print("Variable c contains: {}  which is of type: {} ".format(dicta['Value'], dicta["Type"]))
 
 
 def checkd():
     global typ
     typechecker(d)
     global dicta
-    print("Variable d contains: {} which is of type: {} ".format(dicta['Value'], dicta["Type"]))
+    print("Variable d contains: {}  which is of type: {} ".format(dicta['Value'], dicta["Type"]))
 
 
 def main():
