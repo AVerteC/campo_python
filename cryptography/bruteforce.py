@@ -40,8 +40,14 @@ def crot(inputtext, rot):
             print(c, end="")
 
 
+def fcrot(inputtext):
+    for x in range(1,26):
+        outtext = str(crot(inputtext, x)).replace("None", "")
+        print(outtext)
+
+
 def main():
-    crot(pipecleaner(), 21)
+    fcrot(pipecleaner())
 
 
 main()
