@@ -5,13 +5,18 @@ import sys
 
 
 def pipecleaner():
-    inputtext = ' '.join(sys.argv[1:])
-    inputtext = inputtext.replace("[", "")
-    inputtext = inputtext.replace("]", "")
-    inputtext = inputtext.replace("\"", "")
-    inputtext = inputtext.replace("", "")
-    inputtext = inputtext.replace("\\n", "")
-    return inputtext
+    if len(sys.argv) != 2:
+        print("")
+        inputtext = ""
+        return inputtext
+    else:
+        inputtext = ' '.join(sys.argv[1:])
+        inputtext = inputtext.replace("[", "")
+        inputtext = inputtext.replace("]", "")
+        inputtext = inputtext.replace("\"", "")
+        inputtext = inputtext.replace("", "")
+        inputtext = inputtext.replace("\\n", "")
+        return inputtext
 
 
 def upperbet(c, rot):
@@ -42,6 +47,8 @@ def crot(inputtext, rot):
 
 def main():
     crot(pipecleaner(), 21)
+
+
 
 
 main()
