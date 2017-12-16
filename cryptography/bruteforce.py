@@ -11,7 +11,7 @@ def pipecleaner():
     inputtext = inputtext.replace("\"", "")
     inputtext = inputtext.replace("", "")
     inputtext = inputtext.replace("\\n", "")
-    return inputtext
+    return inputtext√
 
 
 def upperbet(c, rot):
